@@ -1,4 +1,4 @@
-var CLIENT_ID = '566690036668-5eh4av0hm66gbd16rpg6gcbn7hbrcfsj.apps.googleusercontent.com';
+var CLIENT_ID = '566690036668-1m6nqeeovhok1r8p80ttkiuvlvoabqop.apps.googleusercontent.com';
 var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
 var SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
 
@@ -14,6 +14,7 @@ var searchInput = document.getElementById('searchVideo');
 var searchContainer = document.getElementById('search-container');
 var channelVideoInfo = document.getElementById('channel-video-info');
 var searchVideoInfo = document.getElementById('search-video-info');
+var loginText = document.getElementById('logText');
 var defaultChannel = 'ThrasherMagazine';
 
 //change channel
@@ -63,6 +64,7 @@ function updateSigninStatus(isSignedIn) {
     signoutButton.style.display = 'block';
     content.style.display = 'block';
     videoContainer.style.display = 'block';
+    loginText.innerHTML = 'Sign Out of your Google Account.';
     getChannel(defaultChannel);
   }
   else {
@@ -70,6 +72,7 @@ function updateSigninStatus(isSignedIn) {
     signoutButton.style.display = 'none';
     content.style.display = 'none';
     videoContainer.style.display = 'none';
+    loginText.innerHTML = 'Sign In to your Google Account to access features.';
   }
 }
 
