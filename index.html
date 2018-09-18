@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>Search youtube</title>
+
+		<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"/>
+		<link rel="stylesheet" href="styles.css"/>
+		<script>
+		function getDate() {
+			var date = new Date().toLocaleString();
+			document.getElementById("foot").innerHTML =  "Page loaded: " + date;
+		}
+		</script>
+
+		<style>
+			#content,
+			#auth-button,
+			#logout-button {
+				display: none;
+			}
+		</style>
+	</head>
+	<body onload="getDate()">
+
+	<div class="page-header">
+		<br/>
+			<h3>&nbspSearch YouTube For a Video or Channel</h3><br/>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			  <a class="navbar-brand" href="#">YouTube API</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="/">Search Channel/Video</a>
+			      </li>
+			    </ul>
+			  </div>
+			</nav>
+	</div>
+	<main>
+		<div class="form-row">
+			<div class="col-md-4">
+				<p>Google Account Authorisation.</p>
+				<button class="btn btn-yt" id="authorize-button">Sign In</button>
+				<button class="btn btn-yt" id="signout-button">Sign Out</button>
+			</div>
+			<div id="content" class="col-md-4 offset-md-4">
+				<form id="channel-form">
+					<div class="form-group col-md-4">
+						<input type="text" id="searchChannel" placeholder="Enter your search criteria" class="form-control"/>
+					</div>
+					<div class="col-md-1 offset-md-3">
+						<input type="submit" value="Search Channel" class="btn btn-primary">
+				</form>
+			</div>
+		</div>
+			<div class="col-md-12"><br/><hr></div>
+			<div class="col-md-6">
+				<div class="form-row">
+			<div id="channel-thumbnail" class="col-md-6">
+			</div>
+	    <div id="channel-info" class="col-md-6">
+			</div>
+		</div>
+			<div id="channel-video-info" class="col-md-12">
+			</div>
+			</div>
+			<div id="video-container" class="col-md-5 offset-md-1">
+			</div>
+		</div>
+		<hr>
+		<h3>Search All Videos</h3>
+		<form id="search-form">
+			<div class="form-group col-md-4">
+				<input type="text" id="searchVideo" placeholder="Enter your search criteria" class="form-control"/>
+			</div>
+			<div class="col-md-1 offset-md-1">
+				<input type="submit" value="Search Video" class="btn btn-primary">
+		</form>
+		</div>
+		<div class="form-row col-md-12">
+		<div id="search-video-info" class="col-md-6">
+		</div>
+		<div id="search-container" class="col-md-6">
+		</div>
+	</div>
+	</main>
+	<script type="text/javascript" src="main.js"></script>
+	<script async defer src="https://apis.google.com/js/api.js"
+	      onload="this.onload=function(){};handleClientLoad()"
+	      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<footer>
+		<div class="form-row">
+			<div class="col-md-3">Built By Connor Chard</div>
+			<div class="col-md-4 offset-md-4" id="foot"></div>
+		</div>
+	</footer>
+</body>
+</html>
