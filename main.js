@@ -102,7 +102,7 @@ function getChannel(channel) {
       <ul class="list-group">
         <li class="list-group-item">Channel Title: ${channel.snippet.title}</li>
         <li class="list-group-item">ID: ${channel.id}</li>
-        <li class="list-group-item">Description ${channel.snippet.description}</li>
+        <li class="list-group-item">Description: ${channel.snippet.description}</li>
         <li class="list-group-item">Subscribers: ${numberWithComma(channel.statistics.subscriberCount)}</li>
         <li class="list-group-item">Total Views: ${numberWithComma(channel.statistics.viewCount)}</li>
         <li class="list-group-item">Number of Videos: ${numberWithComma(channel.statistics.videoCount)}</li>
