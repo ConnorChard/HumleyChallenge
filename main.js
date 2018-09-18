@@ -1,4 +1,4 @@
-var CLIENT_ID = '566690036668-1m6nqeeovhok1r8p80ttkiuvlvoabqop.apps.googleusercontent.com';
+var CLIENT_ID = '566690036668-5eh4av0hm66gbd16rpg6gcbn7hbrcfsj.apps.googleusercontent.com';
 var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
 var SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
 
@@ -15,7 +15,7 @@ var searchContainer = document.getElementById('search-container');
 var channelVideoInfo = document.getElementById('channel-video-info');
 var searchVideoInfo = document.getElementById('search-video-info');
 var loginText = document.getElementById('logText');
-var defaultChannel = 'ThrasherMagazine';
+var defaultChannel = 'GoogleDevelopers';
 
 //change channel
 channelForm.addEventListener('submit', e => {
